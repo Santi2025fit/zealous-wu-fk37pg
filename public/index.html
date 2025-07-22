@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FIT ZONE</title>
+
+    <!-- Fuentes y CSS de Tailwind CSS y Font Awesome -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Configuración de Tailwind CSS para la fuente Inter
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              inter: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Importa los SDK de Firebase desde CDN -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+      import { getAuth } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+      import { getFirestore } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+      // *** PEGA AQUÍ TU OBJETO firebaseConfig COPIADO DE LA CONSOLA DE FIREBASE ***
+      // Ejemplo (REEMPLAZA ESTO CON TUS DATOS REALES):
+      const firebaseConfig = {
+        apiKey: "AIzaSyAcKu8zlEk2TE-urv514bBff3xyasE7_W0",
+        authDomain: "fit-zone-8eb9d.firebaseapp.com",
+        projectId: "fit-zone-8eb9d",
+        storageBucket: "fit-zone-8eb9d.firebasestorage.app",
+        messagingSenderId: "308603431844",
+        appId: "1:308603431844:web:96117fc3d442e294e36f31",
+        measurementId: "G-M9LNQCY4QK",
+      };
+      // **************************************************************************
+
+      // Las variables globales que tu aplicación React usa
+      window.__app_id = firebaseConfig.appId;
+      window.__firebase_config = JSON.stringify(firebaseConfig);
+
+      // Nota: La inicialización de Firebase se hace principalmente en App.js
+      // Estas líneas comentadas son solo para referencia si se usaran aquí directamente.
+      // const app = initializeApp(firebaseConfig);
+      // const db = getFirestore(app);
+      // const auth = getAuth(app);
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Aquí es donde tu aplicación React se montará -->
+    <!-- El script de tu aplicación React se generará y cargará automáticamente por CodeSandbox -->
+  </body>
+</html>
